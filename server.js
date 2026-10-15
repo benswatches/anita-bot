@@ -1,7 +1,9 @@
 import express from "express";
+import { tvRouter } from "./tv/router.js";
 
 const app = express();
 app.use(express.json());
+app.use("/tv", tvRouter);
 
 app.get("/", (req, res) => {
   res.send("Anita is up ✅");
